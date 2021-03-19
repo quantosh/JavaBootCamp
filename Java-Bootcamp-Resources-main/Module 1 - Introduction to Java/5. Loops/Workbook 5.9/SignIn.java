@@ -18,22 +18,20 @@ public class SignIn {
         password = scan.nextLine();
 
         boolean dataMatch = true;
-                
-        while(dataMatch){
-            if(username.equals("Samantha") && password.equals("Java")){
-            System.out.println("\nSign in sucessful. Welcome!\n");
-            dataMatch = false;
+
+        while (dataMatch) {
+            if (username.equals("Samantha") && password.equals("Java")) {
+                System.out.println("\nSign in sucessful. Welcome!\n");
+                dataMatch = false;
             } else {
                 System.out.println("\nIncorrect please try again!\n");
                 System.out.print("• Username: ");
                 username = scan.nextLine();
-        
+
                 System.out.print("• Password: ");
                 password = scan.nextLine();
             }
-
         }
         scan.close();
-
     }
 }
