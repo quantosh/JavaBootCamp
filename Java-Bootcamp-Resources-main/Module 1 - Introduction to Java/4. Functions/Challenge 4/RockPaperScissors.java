@@ -25,12 +25,12 @@ public class RockPaperScissors {
             break;
             case "no":
             System.out.println("¡Okay, see you!");
+            System.exit(0);
             break;
             default: System.out.println("Please enter yes or no");
         }
         scan.close();
     }
-
 
     //Task 3  – Write a function where the computer picks a random choice.
     public static String computerChoice(){
