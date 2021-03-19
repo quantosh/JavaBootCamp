@@ -16,37 +16,28 @@ public class JavaRolls {
     int score = 0;
     int dice = 0;
     // Users win if 3 or more score
-    if(score >= 3){
-      // Get "infinite" numbers by user
-      while (true) {
-        dice = rollDice();
-        System.out.println("You :" +userInput +"\nDice: " + dice);
-        if(score == dice){
-          score++;
-        }
+    // Get "infinite" numbers by user
+    while (score < 3) { // if user get 3 points game stop
+      dice = rollDice();
+      System.out.println("\nYou rolled a: " + dice);
+      if (dice == 6) { // 6 game stop
+        System.out.println("End of game - You lose");
+        break;
+      } else if (dice == 4) { // 4 nothing happens
+        System.out.println("0 Points Keep Rolling");
+        continue;
+      } else { // 1 2 3 5 score ++ || Recount
+        System.out.println("Congrats +1 point, you got: " + score + " points.");
+        score++;
       }
     }
 
+    if (score >= 3) {
+      System.out.println("\nWow, there is a lucky one. \nYour score is: " + score);
+    } else {
+      System.out.println("\nTough luck, you lose :( \nYour score is: " + score);
+    }
     
-
-    /*
-     * Task 3 1. Make a while loop that runs forever 2. During each run, get them to
-     * enter a random value
-     * 
-     * 
-     * Task 5 1. During each run, call the rollDice() function. 2. Print each dice
-     * roll like so: You rolled a <diceRoll>.
-     * 
-     * 
-     * Task 6 If the user rolls a 6: 1. print: End of game. 2. stop the game.
-     * 
-     * If the user rolls a 4: 1. print: Zero points. Keep rolling.
-     * 
-     * If the user rolls anything else: 1. update the points variable by 1 2. print:
-     * One point. Keep rolling.
-     * 
-     */
-
     /*
      * Task 7
      * 
