@@ -10,13 +10,13 @@ public class Doubles {
 
         // 1. Set up a loop that keeps running while the two dice aren't the same.
         // 2. During each run, re-roll the dice and print the two values.
-        boolean same = true;
-        while (same) {
+        boolean notSame = true;
+        while (notSame) {
             if (dice1 == dice2) {
                 System.out.println("You rolled doubles: ");
                 System.out.println("Dice 1: " + dice1);
                 System.out.println("Dice 2: " + dice2 + "\n");
-                same = false;
+                notSame = false;
             } else {
                 dice1 = rollDice();
                 dice2 = rollDice();
