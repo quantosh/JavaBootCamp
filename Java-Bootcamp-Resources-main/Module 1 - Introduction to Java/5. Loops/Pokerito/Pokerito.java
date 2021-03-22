@@ -70,10 +70,10 @@ public class Pokerito {
             System.out.println("Player wins");
         } else if (playerMatches < cpuMatches){
             System.out.println("Cpu wins");
-        } else if (playerMatches == cpuMatches){
-            System.out.println("Every one wins!");
         } else if (playerMatches == 0 && cpuMatches == 0){
             System.out.println("You both lose :(");
+        } else if (playerMatches == cpuMatches){
+            System.out.println("Every one wins!");
         }
         scan.close();
     }
