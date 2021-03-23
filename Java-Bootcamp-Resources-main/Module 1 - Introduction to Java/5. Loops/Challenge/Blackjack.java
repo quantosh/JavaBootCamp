@@ -263,7 +263,7 @@ public class Blackjack {
             } else if (option.equals("stay")) {
                 stayOrHit = false;
                 return "stay";
-            } else if (!option.equals("stay") || !option.equals("hit")) {
+            } else if (!option.equals("stay") || !option.equals("hit")) { // podría poner while true y el return para el bucle
                 boolean equal = true;
                 while (equal) {
                     System.out.println("Please write 'hit' or 'stay'.");
