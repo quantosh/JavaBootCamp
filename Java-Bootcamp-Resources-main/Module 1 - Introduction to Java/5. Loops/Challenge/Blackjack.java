@@ -54,31 +54,31 @@ public class Blackjack {
             System.out.println("Your new total is: " + userTotal);
         }
         // For tasks 9 to 13, see the article: Blackjack Part II.
-        if (userTotal > 21){
+        if (userTotal > 21) {
             System.out.println("Bust! Player loses");
             System.exit(0);
         }
-        
+
         System.out.println("Dealers Turn");
         System.out.println("Dealer cards are: \n" + dealerCard1);
         System.out.println("And a : \n" + dealerCard2);
         int dealerTotal = cpuPoints;
-        while(dealerTotal < 17) {
+        while (dealerTotal < 17) {
             int dealerHit = drawRandomCard();
             System.out.println("Dealer gets a: \n" + cardString(dealerHit));
             dealerTotal = cpuPoints + dealerHit;
             System.out.println("Dealer new total is: " + dealerTotal);
-            if(dealerTotal < 21){
+            if (dealerTotal < 21) {
                 System.out.println("Bust! Dealer loses");
                 System.exit(0);
-            } 
-            if (userTotal > dealerTotal){
+            }
+            if (userTotal > dealerTotal) {
                 System.out.println("Player WINS!");
                 System.exit(0);
             } else {
                 System.out.println("Dealer WINS!");
                 System.exit(0);
-            } 
+            }
         }
         scan.close();
 
@@ -257,13 +257,14 @@ public class Blackjack {
         System.out.println("You hit or stay? Please write 'hit' or ''stay'");
         String option = scan.nextLine();
         boolean stayOrHit = true;
-        while(stayOrHit){
+        while (stayOrHit) {
             if (option.equals("hit")) {
                 return "hit";
             } else if (option.equals("stay")) {
                 stayOrHit = false;
                 return "stay";
-            } else if (!option.equals("stay") || !option.equals("hit")) { // podría poner while true y el return para el bucle
+            } else if (!option.equals("stay") || !option.equals("hit")) { // podría poner while true y el return para el
+                                                                          // bucle
                 boolean equal = true;
                 while (equal) {
                     System.out.println("Please write 'hit' or 'stay'.");
