@@ -71,7 +71,14 @@ public class Blackjack {
             if(dealerTotal < 21){
                 System.out.println("Bust! Dealer loses");
                 System.exit(0);
-            }
+            } 
+            if (userTotal > dealerTotal){
+                System.out.println("Player WINS!");
+                System.exit(0);
+            } else {
+                System.out.println("Dealer WINS!");
+                System.exit(0);
+            } 
         }
         scan.close();
 
