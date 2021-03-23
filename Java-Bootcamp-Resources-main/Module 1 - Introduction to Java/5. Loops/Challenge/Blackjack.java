@@ -14,7 +14,7 @@ public class Blackjack {
         // Task 4 – Get two random cards.
         int user1 = drawRandomCard();
         int user2 = drawRandomCard();
-        final int userPoints = user1 + user2;
+        int userPoints = user1 + user2;
         String userCard1 = cardString(user1);
         String userCard2 = cardString(user2);
 
@@ -45,22 +45,34 @@ public class Blackjack {
         // - print: your new total is <total>
 
         // 2. Once the player stays, break the loop.
+        int userTotal = userPoints;
         String hitOrStay = hitOrStay();
         if (hitOrStay.equals("hit")) {
             int userHit = drawRandomCard();
             System.out.println("You get a: \n" + cardString(userHit));
-            int total = userPoints + userHit; // Sumo los pts de la carta a pts totales
-            System.out.println("Your new total is: " + total);
+            userTotal = userPoints + userHit; // Sumo los pts de la carta a pts totales
+            System.out.println("Your new total is: " + userTotal);
         }
         // For tasks 9 to 13, see the article: Blackjack Part II.
-        if (total > 21){
+        if (userTotal > 21){
             System.out.println("Bust! Player loses");
             System.exit(0);
         }
+        
         System.out.println("Dealers Turn");
-        System.out.println("Dealers Turn");
-        System.out.println("Dealers Turn");
-
+        System.out.println("Dealer cards are: \n" + dealerCard1);
+        System.out.println("And a : \n" + dealerCard2);
+        int dealerTotal = cpuPoints;
+        while(dealerTotal < 17) {
+            int dealerHit = drawRandomCard();
+            System.out.println("Dealer gets a: \n" + cardString(dealerHit));
+            dealerTotal = cpuPoints + dealerHit;
+            System.out.println("Dealer new total is: " + dealerTotal);
+            if(dealerTotal < 21){
+                System.out.println("Bust! Dealer loses");
+                System.exit(0);
+            }
+        }
         scan.close();
 
     }
