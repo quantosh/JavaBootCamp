@@ -15,7 +15,7 @@ public class Receipt {
             }
         */
             for(int i = 0; i < apple.length; i++){
-                System.out.println("      " + apple[i] + price[i]); 
+                System.out.println("\t" + apple[i] + "$"+price[i]); 
             }
     }
 }
