@@ -8,7 +8,7 @@ public class HighScore {
          *         Example – Here are the scores: 14775 48328 7928 27102 21787 21063 38096 42711 32863 23707
          */
         int highScore = 0;
-
+        int
          /** Task 3
           *  
           *   1. Using a for loop, find the highest score in the array and update the highScore.
