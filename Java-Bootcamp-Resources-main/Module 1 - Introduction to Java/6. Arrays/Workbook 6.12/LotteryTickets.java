@@ -5,9 +5,11 @@ public class LotteryTickets {
         int[] ticket = {34, 43, 45, 65, 21, 54};
         //Task 1 - Copy the elements of ticket into ticket2, but change the third value to 54. 
         int[] ticket2 = new int[6];
+
         for(int i = 0; i < ticket.length; i++){
            ticket2[i] = ticket[i];
         }
+        ticket2[2] = 54;
         System.out.print("Ticket 1 numbers: ");
         //Task 3 - Call printTicketNumbers for int[] ticket.   
         printTicketNumbers(ticket);
