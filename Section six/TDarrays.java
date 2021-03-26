@@ -36,8 +36,21 @@ public class TDarrays {
         System.out.println("\tHarry: " + Arrays.toString(grades2[0]));
         System.out.println("\tRon: " + Arrays.toString(grades2[1]));
         System.out.println("\tHermione: " + Arrays.toString(grades2[2])); 
-        for(int i = 0; i < grades.length; i++){
 
-        }
+        // NESTED LOOP 125. Looping Arrays
+        System.out.println("\nNested loop: ");
+        // Row Index
+        for(int i = 0; i < grades.length; i++){
+            // Element of row
+            switch (i){
+                case 0: System.out.print("\tHarry: "); break;
+                case 1: System.out.print("\tRon: "); break;
+                case 2: System.out.print("\tHermione: "); break;
+            }
+            for(int j = 0; j < grades[i].length; j++){
+            System.out.print(grades[i][j] + " ");
+            }
+            System.out.println("\n");
+        } 
     } 
 }
