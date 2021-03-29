@@ -7,9 +7,9 @@ public class Javapedia {
         System.out.println("How many historical figures will you register?");
         //Task 1 – Ask the user: how many historical figures will you register?
         //       – Store the value.
-        
+        String historical = scan.nextInt();
         //Task 2 – Create a 2D array with a variable number of rows, and 3 values per row.         
-         
+        int[][] TDarray = new int[historical][3];
         //Watch out for the nextLine() pitfall. 
         /* Task 3 
         for (____) {
@@ -26,7 +26,6 @@ public class Javapedia {
             pick up and store figure's occupation. 
 
             System.out.print("\n");
-
         }
         
         */
@@ -56,5 +55,11 @@ public class Javapedia {
      *     • each value in database has one space from the other value. 
      *     • print a new line.
      */
-
+    public static void print2DArray(){
+        for(int i = 0; i < TDarray.length; i++){
+            for(int j = 0; j < TDarray[i].length; j++){
+            System.out.println(TDarray[i][j] + " ");
+            }
+        }
+    }
 }
